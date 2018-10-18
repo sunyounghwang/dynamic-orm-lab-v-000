@@ -9,7 +9,7 @@ class InteractiveRecord
   end
 
   def self.column_names
-    table_info = DB[:conn].execute("PRAGMA table_info('#{table_name})'"")
+    table_info = DB[:conn].execute("PRAGMA table_info('#{table_name})'")
     table_info.map { |column_hash| column_hash["name"]  }.compact
     binding.pry
   end
