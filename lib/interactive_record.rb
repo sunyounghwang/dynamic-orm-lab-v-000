@@ -16,5 +16,5 @@ class InteractiveRecord
 
   def initialize(attributes)
     
-  end 
+  end
 end
