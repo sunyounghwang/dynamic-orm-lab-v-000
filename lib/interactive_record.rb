@@ -20,8 +20,8 @@ class InteractiveRecord
 
   def self.find_by(attributes)
     attribute, value = attributes.keys[0], attributes.values[0]
-    sql = "SELECT * FROM #{table_name} WHERE #{attributes.keys.first} = ?"
-    DB[:conn].execute(sql, attributes.values.first)
+    sql = "SELECT * FROM #{table_name} WHERE #{attribute} = ?"
+    DB[:conn].execute(sql, value)
   end
 
   def initialize(attributes={})
