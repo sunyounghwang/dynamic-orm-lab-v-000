@@ -16,4 +16,8 @@ class InteractiveRecord
   def initialize(attributes={})
     attributes.each { |attribute, value| send("#{attribute}=", value) }
   end
+
+  def table_name_for_insert
+    
+  end
 end
