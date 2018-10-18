@@ -14,4 +14,5 @@ class InteractiveRecord
 
   column_names.each { |name| attr_accessor name.to_sym }
 
+  
 end
