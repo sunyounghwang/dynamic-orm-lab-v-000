@@ -35,7 +35,7 @@ class InteractiveRecord
     binding.pry
     sql = <<-sql
     INSERT INTO #{table_name_for_insert} (col_names_for_insert)
-    VALUES #{values_for_insert}
+    VALUES (#{values_for_insert})
     sql
 
     DB[:conn].execute(sql)
