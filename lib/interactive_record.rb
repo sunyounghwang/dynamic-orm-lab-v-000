@@ -13,6 +13,10 @@ class InteractiveRecord
     table_info.map { |column_hash| column_hash["name"]  }.compact
   end
 
+  def self.find_by_name
+    
+  end
+
   def initialize(attributes={})
     attributes.each { |attribute, value| send("#{attribute}=", value) }
   end
