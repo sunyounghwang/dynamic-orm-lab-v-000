@@ -19,7 +19,7 @@ class InteractiveRecord
   end
 
   def self.find_by(attributes)
-    attribute, value = attributes.keys[0], attributes.values[0]
+    attribute, value = attributes.keys[0].to_s, attributes.values[0]
     binding.pry
     sql = "SELECT * FROM #{table_name} WHERE ? = ?"
     DB[:conn].execute(sql, attribute, value)
