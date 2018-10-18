@@ -9,9 +9,9 @@ class InteractiveRecord
   end
 
   def self.column_names
-    binding.pry
     table_info = DB[:conn].execute("PRAGMA table_info(#{table_name})")
     table_info.map { |column_hash| column_hash["name"]  }.compact
+    binding.pry
   end
 
   self.column_names.each { |name| attr_accessor name.to_sym }
