@@ -2,6 +2,8 @@ require_relative "../config/environment.rb"
 require 'active_support/inflector'
 
 class InteractiveRecord
+  column_names.each { |name| attr_accessor name.to_sym }
+  
   def self.table_name
     to_s.downcase.pluralize
   end
