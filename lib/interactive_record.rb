@@ -18,6 +18,6 @@ class InteractiveRecord
   end
 
   def table_name_for_insert
-    
+    class.table_name
   end
 end
