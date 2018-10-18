@@ -14,7 +14,7 @@ class InteractiveRecord
   end
 
   def self.find_by_name(name)
-
+    sql = "SELECT * FROM #{table_name} WHERE name = ?"
   end
 
   def initialize(attributes={})
