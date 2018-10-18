@@ -14,7 +14,6 @@ class InteractiveRecord
   end
 
   def self.find_by_name
-    sql
   end
 
   def initialize(attributes={})
