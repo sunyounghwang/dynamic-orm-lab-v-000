@@ -30,7 +30,7 @@ class InteractiveRecord
     self.class.column_names.each { |name| values << "'#{send(name)}'" unless self.send(name).nil? }
     values.join(", ")
   end
-
+binding.pry
   def save
     sql = <<-sql
     INSERT INTO #{table_name_for_insert} (col_names_for_insert)
