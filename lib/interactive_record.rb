@@ -14,7 +14,7 @@ class InteractiveRecord
 
   column_names.each { |name| attr_accessor name.to_sym }
 
-  def initialize()
-    
+  def initialize
+
   end
 end
