@@ -12,8 +12,10 @@ class InteractiveRecord
     table_info.map { |column_hash| column_hash["name"]  }.compact
   end
 
-  column_names.each { |name| attr_accessor name.to_sym }
-
+  self.column_names.each { |name| attr_accessor name.to_sym }
+  self.column_names.each do |col_name|
+      attr_accessor col_name.to_sym
+    end
   def initialize(attributes={})
     attributes.each { |attribute, value| send("#{attribute}=", value) }
   end
