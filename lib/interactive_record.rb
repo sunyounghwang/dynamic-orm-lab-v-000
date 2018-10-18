@@ -26,6 +26,7 @@ class InteractiveRecord
   end
 
   def values_for_insert
-    self.class.column_names.map { |name| "'#{send(name)}'" unless self.send(name).nil? }
+    values = []
+    self.class.column_names.each { |name| values << "'#{send(name)}'" unless self.send(name).nil? }
   end
 end
