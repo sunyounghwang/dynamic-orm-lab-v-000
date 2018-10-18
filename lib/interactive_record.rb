@@ -1,5 +1,6 @@
 require_relative "../config/environment.rb"
 require 'active_support/inflector'
+require 'pry'
 
 class InteractiveRecord
 
@@ -12,7 +13,6 @@ class InteractiveRecord
     table_info.map { |column_hash| column_hash["name"]  }.compact
   end
 
-  binding.pry
   self.column_names.each { |name| attr_accessor name.to_sym }
 
   def initialize(attributes={})
